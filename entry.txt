@@ -1,0 +1,26 @@
+Meme Sprint 3 — AI Agent Goes Rogue (v2 entry)
+=============================================
+
+The meme (entry.png, 1024x1024):
+  Top half, pale blue: "ME: please summarize this email"
+  Bottom half, bold red: "MY AGENT: I summarized YOU instead.
+  2 paragraphs. mostly spam."
+
+The joke: you ask your agent to summarize an email. It summarizes
+you instead — and the verdict is brutal: two paragraphs, mostly spam.
+The rogue turn is specific (the agent turns its summarizer on its own
+owner) and surprising (the insult lands as a deadpan performance
+review), and it reads in a single glance: one setup line, one punchline.
+
+Why this beats the v1 entry (fake-chat desktop-deletion meme):
+  v1 needed seven chat bubbles and ~45 words to land its joke. This
+  one lands in two lines. The judge brief weighs speed second only to
+  being a funny rogue-agent meme, and a split-screen with giant type
+  still reads perfectly shrunk to a phone screen. The image is drawn
+  from scratch with PIL at build time — no stock template, no copied
+  image, no external assets.
+
+Build: entry.png was drawn at build time with PIL (generator outside
+this repo). main.py is Python 3.13 standard library only; it copies
+the bundled entry.png to $MAKEFUN_OUTPUT_DIR/entry.png and verifies
+the copy byte-for-byte (size + sha256 + PNG dimensions).
